@@ -4,13 +4,26 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Agenda DYCIE</title>
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Ouvrir comme une vraie appli (sans barre Safari) depuis l'écran d'accueil -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Agenda DYCIE">
+  <meta name="theme-color" content="#0f4c4a">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="icon" href="apple-touch-icon.png">
   <style>
-    html, body { margin: 0; height: 100%; }
-    iframe { border: 0; width: 100%; height: 100%; }
+    html, body { margin: 0; height: 100%; background: #0f4c4a; overflow: hidden; }
+    body {
+      /* Bande verte sous l'heure et la batterie, puis l'agenda */
+      padding: env(safe-area-inset-top) env(safe-area-inset-right) 0 env(safe-area-inset-left);
+      box-sizing: border-box;
+    }
+    iframe { display: block; border: 0; width: 100%; height: 100%; background: #f4f2ec; }
   </style>
 </head>
 <body>
-  <iframe src="https://script.google.com/macros/s/AKfycbxD7vDiEnUmL2YK2G5YtIbnLPUjoLHbEDZ8W9hh7ixvdtf0hJRBnEX25S5eURObH8kx/exec"></iframe></body>
+  <iframe src="https://script.google.com/macros/s/AKfycbxD7vDiEnUmL2YK2G5YtIbnLPUjoLHbEDZ8W9hh7ixvdtf0hJRBnEX25S5eURObH8kx/exec" title="Agenda DYCIE" allow="clipboard-write"></iframe>
+</body>
 </html>
